@@ -1,0 +1,77 @@
+header {
+    width: 100%;
+    background: rgba($color-yell, 0.85);
+    padding: 4rem 0;
+    position: fixed; 
+    top: 0;
+    right: 0;
+
+    @include tablet {
+        padding: 1.6rem 0;
+    }
+
+    div {
+        width: 80%;
+        margin: 0 auto;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+
+        .logo {
+            width: 30%;
+
+            img{
+                width: 100%;
+                min-width: 180px;
+            } 
+        }
+
+        nav { 
+            width: 68%; 
+            float: right;
+
+            @include tablet {
+                width: 100%; 
+                margin-top: 2rem;
+            }
+            
+            ul {
+                list-style: none;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: flex-end;
+                
+                @include tablet {
+                    justify-content: center;
+                }
+
+                li {
+                    margin: 0 1rem;
+                    @include mobile {
+                        margin: 0 ;
+                    }
+
+                    a {
+                        text-transform: uppercase;
+                        color: $color-white;
+                        font-size: 1.8rem;
+                        @include font-regular();
+                        padding: 0.5rem 0.5rem;
+
+                        @include mobile {
+                            font-size: 1.4rem;
+                        }
+
+                        &:hover {
+                            @include font-bold();
+                            border-top: 2px solid $color-white;
+                            color: $color-white ;  
+                        }
+                    }
+
+                }
+            }
+        }
+    }
+}

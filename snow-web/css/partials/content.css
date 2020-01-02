@@ -1,0 +1,8 @@
+.slider {
+  width: 100%;
+  background-image: url(../../img/bg-snow.jpg);
+  background-size: cover; }
+  .slider .content-slider {
+    width: 65%;
+    background: gray;
+    float: left; }

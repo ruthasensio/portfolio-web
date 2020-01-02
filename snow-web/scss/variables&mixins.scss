@@ -1,0 +1,77 @@
+// Colors
+$color-text: #333232;
+$color-blue: #304e65;
+$color-yell: #f39200;
+$color-greylight: #f7f7f7;
+$color-white: #ffffff;
+
+// Fonts
+$font-primary: 'Open Sans', sans-serif;
+
+@mixin font-light() {
+    font-family: $font-primary;
+    font-weight: 300;
+}
+
+@mixin font-regular() {
+    font-family: $font-primary;
+    font-weight: 400;
+}
+
+@mixin font-semi() {
+    font-family: $font-primary;
+    font-weight: 600;
+}
+
+@mixin font-bold() {
+    font-family: $font-primary;
+    font-weight: 700;
+}
+
+@mixin font-extra() {
+    font-family: $font-primary;
+    font-weight: 800;
+}
+
+
+// Otros mixins
+
+@mixin triangle {
+        width: 0; 
+        height: 0; 
+        border-left: 10px solid transparent;
+        border-right: 10px solid transparent;
+        border-top: 10px solid $color-yell; 
+}
+
+@mixin roundedImage {
+    -webkit-border-radius: 50%;
+    -moz--border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    border-radius: 50%;
+}
+
+@mixin slow {
+    transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    -webkit-transition: all 0.5s ease;
+}
+
+
+// Devices
+
+$mobile: 500px;
+$tablet: 780px;
+
+@mixin mobile { 
+    @media screen and (max-width: $mobile) {
+        @content;   
+    }
+}
+
+@mixin tablet { 
+    @media screen and (max-width: $tablet) {
+        @content;
+    }
+}
